@@ -14,6 +14,7 @@ import Link from "@mui/material/Link";
 import { motion } from "framer-motion";
 import ReactCardFlip from "react-card-flip";
 import LinkedInPostCard from "../components/LinkedInPostCard";
+import ContactForm from "../components/ContactForm";
 const posts = [
   {
     title: "Amazing Tech Update",
@@ -103,6 +104,7 @@ const posts = [
     url: "https://www.linkedin.com/pulse/technology-in-healthcare",
   },
 ];
+const counselling = [];
 
 const LandingPage = () => {
   useEffect(() => {
@@ -338,7 +340,7 @@ const LandingPage = () => {
         <Typography variant="h4" align="center" sx={{ mt: 8, mb: 4 }}>
           Our Community
         </Typography>
-        <Grid container spacing={4} justifyContent="center">
+        <Grid container spacing={4} justifyContent="center" sx={{ mb: 4 }}>
           {[
             { platform: "YouTube", count: "1.7M+" },
             { platform: "LinkedIn", count: "600K+" },
@@ -354,6 +356,7 @@ const LandingPage = () => {
             </Grid>
           ))}
         </Grid>
+        <ContactForm />
       </Container>
     </Box>
   );
